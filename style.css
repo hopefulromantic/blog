@@ -1,0 +1,203 @@
+/* General Page Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fce4ec;
+  /* Polka dot background styling */
+  background-image: 
+    radial-gradient(#ec407a 20%, transparent 20%),
+    radial-gradient(#aed581 20%, transparent 20%);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
+  color: #333;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header Banner */
+header {
+  background: #ffffff;
+  border: 3px dashed #e91e63;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 4px 4px 0px #f48fb1;
+}
+
+header h1 {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+  color: #d81b60;
+  font-size: 2.8rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #7b1fa2;
+  font-size: 1rem;
+}
+
+/* Layout Split (Posts + Sidebar) */
+.content-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* Main Posts Column */
+main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background: #ffffff;
+  border: 2px solid #f06292;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 3px 3px 0px #ce93d8;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 4px;
+}
+
+.post h2 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #c2185b;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.post p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.post-footer {
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px dotted #eee;
+  padding-top: 8px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f8bbd0;
+  color: #880e4f;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Sidebar Column */
+aside {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.widget {
+  background: #ffffff;
+  border: 2px solid #81c784;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 3px 3px 0px #aed581;
+}
+
+.widget h3 {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #2e7d32;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #aed581;
+  padding-bottom: 4px;
+}
+
+.widget ul {
+  list-style: none;
+}
+
+.widget li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.widget a {
+  color: #c2185b;
+  text-decoration: none;
+}
+
+.widget a:hover {
+  text-decoration: underline;
+}
+
+/* Banner Button Widget */
+.btn-banner {
+  display: block;
+  background: #e91e63;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px dashed #ffffff;
+  box-shadow: 0 0 0 3px #e91e63;
+}
+
+.btn-banner:hover {
+  background: #d81b60;
+}
+
+/* Contact Form Input Styles */
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  background: #81c784;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #66bb6a;
+}
