@@ -31,6 +31,7 @@ body {
 
   /* Optional: fallback color while the image loads */
   background-color: #fce4ec;
+  padding: 20px;
 }
 
 /* Main Container */
@@ -182,7 +183,7 @@ aside {
   font-size: 1.6rem;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid #e91e63;
+  border: 2px solid #ffffff;
 }
 
 .btn-banner:hover {
