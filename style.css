@@ -1,9 +1,13 @@
 /* Import Ruge Boogie from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
-
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap');
-</style>
+
+.purple-purse-regular {
+  font-family: "Purple Purse", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* General Page Reset & Base Styles */
 * {
@@ -139,9 +143,9 @@ aside {
   box-shadow: 3px 3px 0px #aed581;
 }
 
-/* Targets only the h3 inside the first .widget in the sidebar */
-aside .widget:first-of-type h3 {
-  font-family: 'Ruge Boogie', cursive; /* Replace with whatever font you want */
+/* Direct child selector to target ONLY the first widget block in the sidebar */
+aside > .widget:nth-of-type(1) h3 {
+  font-family: 'Ruge Boogie', cursive; /* Change to your desired font */
   font-size: 1.3rem;
 }
 
