@@ -10,28 +10,17 @@
   padding: 0;
 }
 
-/* Change this in body */
+/* Base Page & Background Styles */
 body {
   font-family: 'Courier New', Courier, monospace;
-  
-  /* Path to your local image */
   background-image: url('background.jpg');
-  
-  /* Make image cover the entire screen without stretching distortion */
   background-size: cover;
-  
-  /* Center the image */
   background-position: center center;
-  
-  /* Ensure it repeats seamlessly if needed, or stays clean */
   background-repeat: no-repeat;
-  
-  /* Keeps the background scrolling naturally along with the page content */
-  background-attachment: scroll; 
-
-  /* Optional: fallback color while the image loads */
+  background-attachment: scroll;
   background-color: #fce4ec;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
+  color: #333;
 }
 
 /* Main Container */
