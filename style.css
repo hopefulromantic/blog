@@ -1,6 +1,10 @@
 
 /* Import Ruge Boogie from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
 
 /* General Page Reset & Base Styles */
 * {
@@ -90,7 +94,7 @@ main {
 }
 
 .post h2 {
-  font-family: 'Ruge Boogie', cursive;
+  font-family: 'Purple Purse', serif;
   color: #c2185b;
   margin-bottom: 12px;
   font-size: 1.8rem; /* Adjusted for better visibility */
@@ -137,7 +141,7 @@ aside {
 }
 
 .widget h3 {
-  font-family: 'Ruge Boogie', cursive;
+  font-family: 'Griffy', cursive;
   color: #2e7d32;
   font-size: 1.4rem; /* Adjusted for better visibility */
   margin-bottom: 10px;
