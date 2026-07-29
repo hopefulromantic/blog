@@ -1,9 +1,23 @@
 /* Import Ruge Boogie from Google Fonts */
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Griffy&family=Purple+Purse&display=swap');
+</style>
 
 .purple-purse-regular {
   font-family: "Purple Purse", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.butterfly-kids-regular {
+  font-family: "Butterfly Kids", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.griffy-regular {
+  font-family: "Griffy", system-ui;
   font-weight: 400;
   font-style: normal;
 }
@@ -56,8 +70,9 @@ header h1 {
 }
 
 header p {
+  font-family: 'Purple Purse', serif;
   color: #7b1fa2;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 /* Layout Split (Posts + Sidebar) */
@@ -100,7 +115,7 @@ main {
   font-family: 'Purple Purse', serif;
   color: #c2185b;
   margin-bottom: 12px;
-  font-size: 1.6rem; /* Adjusted for better visibility */
+  font-size: 1.5rem; /* Adjusted for better visibility */
 }
 
 .post p {
@@ -143,14 +158,9 @@ aside {
   box-shadow: 3px 3px 0px #aed581;
 }
 
-/* Direct child selector to target ONLY the first widget block in the sidebar */
-aside > .widget:nth-of-type(1) h3 {
-  font-family: 'Ruge Boogie', cursive; /* Change to your desired font */
-  font-size: 1.3rem;
-}
 
 .widget h3 {
-  font-family: 'Purple Purse', serif;
+  font-family: 'Griffy', system-ui;
   color: #2e7d32;
   font-size: 1.0rem; /* Adjusted for better visibility */
   margin-bottom: 10px;
