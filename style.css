@@ -96,7 +96,7 @@ main {
   font-family: 'Purple Purse', serif;
   color: #c2185b;
   margin-bottom: 12px;
-  font-size: 2.2rem; /* Adjusted for better visibility */
+  font-size: 1.6rem; /* Adjusted for better visibility */
 }
 
 .post p {
@@ -139,10 +139,16 @@ aside {
   box-shadow: 3px 3px 0px #aed581;
 }
 
+/* Targets only the h3 inside the first .widget in the sidebar */
+aside .widget:first-of-type h3 {
+  font-family: 'Ruge Boogie', cursive; /* Replace with whatever font you want */
+  font-size: 1.3rem;
+}
+
 .widget h3 {
   font-family: 'Purple Purse', serif;
   color: #2e7d32;
-  font-size: 1.8rem; /* Adjusted for better visibility */
+  font-size: 1.0rem; /* Adjusted for better visibility */
   margin-bottom: 10px;
   border-bottom: 2px dashed #aed581;
   padding-bottom: 4px;
