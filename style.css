@@ -1,10 +1,7 @@
 
 /* Import Ruge Boogie from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Purple+Purse&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
+/* Delete lines 3-7 and replace them with just this ONE line at the very top */
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Griffy&family=Purple+Purse&family=Ruge+Boogie&display=swap');
 
 /* General Page Reset & Base Styles */
 * {
