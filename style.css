@@ -13,9 +13,24 @@
 /* Change this in body */
 body {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #fce4ec; /* Solid soft pink background */
-  color: #333;
-  padding: 20px;
+  
+  /* Path to your local image */
+  background-image: url('background.jpg');
+  
+  /* Make image cover the entire screen without stretching distortion */
+  background-size: cover;
+  
+  /* Center the image */
+  background-position: center center;
+  
+  /* Ensure it repeats seamlessly if needed, or stays clean */
+  background-repeat: no-repeat;
+  
+  /* Keeps the background scrolling naturally along with the page content */
+  background-attachment: scroll; 
+
+  /* Optional: fallback color while the image loads */
+  background-color: #fce4ec;
 }
 
 /* Main Container */
@@ -167,7 +182,7 @@ aside {
   font-size: 1.6rem;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px dashed #ffffff;
+  border: 2px solid #e91e63;
 }
 
 .btn-banner:hover {
