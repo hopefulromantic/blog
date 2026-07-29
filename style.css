@@ -1,3 +1,6 @@
+/* Import Ruge Boogie from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
+
 /* General Page Reset & Base Styles */
 * {
   box-sizing: border-box;
@@ -38,9 +41,9 @@ header {
 }
 
 header h1 {
-  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Ruge Boogie', cursive;
   color: #d81b60;
-  font-size: 2.8rem;
+  font-size: 3.5rem; /* Increased slightly since script fonts often render smaller */
   margin-bottom: 5px;
 }
 
@@ -86,10 +89,10 @@ main {
 }
 
 .post h2 {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Ruge Boogie', cursive;
   color: #c2185b;
   margin-bottom: 12px;
-  font-size: 1.5rem;
+  font-size: 2.2rem; /* Adjusted for better visibility */
 }
 
 .post p {
@@ -133,9 +136,9 @@ aside {
 }
 
 .widget h3 {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Ruge Boogie', cursive;
   color: #2e7d32;
-  font-size: 1.1rem;
+  font-size: 1.8rem; /* Adjusted for better visibility */
   margin-bottom: 10px;
   border-bottom: 2px dashed #aed581;
   padding-bottom: 4px;
@@ -166,8 +169,8 @@ aside {
   color: white;
   text-align: center;
   padding: 15px;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-weight: bold;
+  font-family: 'Ruge Boogie', cursive;
+  font-size: 1.6rem;
   text-decoration: none;
   border-radius: 8px;
   border: 2px dashed #ffffff;
