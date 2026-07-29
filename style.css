@@ -1,26 +1,7 @@
 /* Import Ruge Boogie from Google Fonts */
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Griffy&family=Purple+Purse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Griffy&family=Purple+Purse&family=Ruge+Boogie&display=swap');
 </style>
-
-.purple-purse-regular {
-  font-family: "Purple Purse", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.butterfly-kids-regular {
-  font-family: "Butterfly Kids", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.griffy-regular {
-  font-family: "Griffy", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
 
 
 /* General Page Reset & Base Styles */
