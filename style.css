@@ -78,9 +78,10 @@ main {
 
 .post {
   background: #ffffff;
-  border: 2px solid #f06292;
+  border: 2px solid #e91e63;
   border-radius: 8px;
   padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .post-date {
@@ -179,6 +180,7 @@ aside {
   text-decoration: none;
   border-radius: 8px;
   border: 2px solid #fabacb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .banner-button:hover {
@@ -190,9 +192,9 @@ aside {
    ========================================== */
 
 .widget-labels {
-  background-color: #eafaf1;
+  background-color: #ffffff;
   border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 .widget-labels h3 {
   color: #2e7d32;
