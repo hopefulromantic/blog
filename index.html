@@ -22,20 +22,8 @@
     <div class="content-wrapper">
       >
       <!-- MAIN BLOG POSTS -->
-      <main>
-        
-        <!-- Post 1 -->
-        <article class="post" data-tags="blog">
-          <div class="post-date">Wednesday, 29 July 2026</div>
-          <h2>Creating a Blog As An Act of Self Love</h2>
-          <p>I looked up the definiton of a blog today, but it didn't quite resonate with what I thought this space was actually capable of doing.</p>
-          <div class="post-footer">
-            <span>Posted at 11:08 PM</span> | 
-            <a href="#" class="tag">blog</a>
-          </div>
-        </article>
-
-  
+      <main id="posts-container">
+        <!-- Posts from posts.json will appear here automatically -->
       </main>
 
       <!-- SIDEBAR WIDGETS -->
@@ -100,45 +88,68 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const posts = document.querySelectorAll("article.post");
+    const postsContainer = document.getElementById("posts-container");
     const labelsList = document.getElementById("labels-list");
 
-    if (!labelsList || posts.length === 0) return;
-
-    // 1. Collect all unique tags from your posts
-    const allTags = new Set();
-    posts.forEach(post => {
-      const tags = post.getAttribute("data-tags");
-      if (tags) {
-        tags.split(",").forEach(tag => allTags.add(tag.trim()));
-      }
-    });
-
-    // 2. Build the sidebar Labels menu automatically
-    labelsList.innerHTML = '<li><a href="#" data-filter="all">all</a></li>';
-    allTags.forEach(tag => {
-      labelsList.innerHTML += `<li><a href="#" data-filter="${tag}">${tag}</a></li>`;
-    });
-
-    // 3. Filter posts when a label is clicked
-    labelsList.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        e.preventDefault();
-        const selectedTag = e.target.getAttribute("data-filter");
+    fetch("posts.json")
+      .then(response => response.json())
+      .then(posts => {
+        postsContainer.innerHTML = "";
+        const allTags = new Set();
 
         posts.forEach(post => {
-          const postTags = post.getAttribute("data-tags") 
-            ? post.getAttribute("data-tags").split(",").map(t => t.trim()) 
-            : [];
-
-          if (selectedTag === "all" || postTags.includes(selectedTag)) {
-            post.style.display = "block";
-          } else {
-            post.style.display = "none";
+          // Collect tags for Labels widget
+          if (post.tags) {
+            post.tags.split(",").forEach(tag => allTags.add(tag.trim()));
           }
+
+          // Generate Post Card HTML
+          const postElement = document.createElement("article");
+          postElement.className = "post";
+          postElement.setAttribute("data-tags", post.tags || "");
+
+          postElement.innerHTML = `
+            <div class="post-date">> ${post.date}</div>
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+            <div class="post-footer">
+              Posted at ${post.time} | <a href="#" class="tag">${post.tags}</a>
+            </div>
+          `;
+
+          postsContainer.appendChild(postElement);
         });
-      }
-    });
+
+        // Build Labels widget automatically
+        if (labelsList) {
+          labelsList.innerHTML = '<li><a href="#" data-filter="all">all</a></li>';
+          allTags.forEach(tag => {
+            labelsList.innerHTML += `<li><a href="#" data-filter="${tag}">${tag}</a></li>`;
+          });
+
+          // Add filter functionality when clicking labels
+          labelsList.addEventListener("click", function (e) {
+            if (e.target.tagName === "A") {
+              e.preventDefault();
+              const selectedTag = e.target.getAttribute("data-filter");
+              const renderedPosts = document.querySelectorAll("article.post");
+
+              renderedPosts.forEach(post => {
+                const postTags = post.getAttribute("data-tags") 
+                  ? post.getAttribute("data-tags").split(",").map(t => t.trim()) 
+                  : [];
+
+                if (selectedTag === "all" || postTags.includes(selectedTag)) {
+                  post.style.display = "block";
+                } else {
+                  post.style.display = "none";
+                }
+              });
+            }
+          });
+        }
+      })
+      .catch(error => console.error("Error loading posts:", error));
   });
   </script>
 
