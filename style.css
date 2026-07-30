@@ -99,6 +99,8 @@ main {
 }
 
 .post p {
+  font-family: 'Buda', cursive, sans-serif;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 12px;
   font-size: 0.95rem;
