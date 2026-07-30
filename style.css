@@ -205,50 +205,75 @@ aside {
   background: #66bb6a;
 }
 
+
 /* ==========================================
    PORTRAIT MOBILE ONLY (Screens under 600px)
    ========================================== */
 @media (max-width: 599px) {
-  /* 1. Force 2 columns side-by-side */
+  /* 1. Scale down Header height & padding */
+  header {
+    padding: 10px 15px !important;
+    margin-bottom: 12px !important;
+  }
+
+  header h1 {
+    font-size: 1.5rem !important; /* Smaller blog title */
+    margin-bottom: 2px !important;
+  }
+
+  header p {
+    font-size: 0.75rem !important; /* Smaller subtitle */
+  }
+
+  /* 2. Side-by-side Layout with increased sidebar width */
   .content-wrapper {
     display: flex !important;
     flex-direction: row !important;
-    gap: 8px; /* Tighter gap for narrow screens */
+    gap: 8px !important;
   }
 
-  /* 2. Main Post Column (Takes ~75% of width) */
+  /* Main Post Column */
   #posts-container {
-    flex: 3;
-    min-width: 0; /* Prevents text/boxes from blowing out the layout */
+    flex: 2 !important; /* ~65% width */
+    min-width: 0 !important;
   }
 
-  /* 3. Asymmetric Mini-Sidebar (Takes ~25% of width) */
+  /* Right Sidebar (Slightly wider to fill gap) */
   aside, .sidebar {
-    flex: 1;
-    min-width: 90px;
-    max-width: 120px;
-    font-size: 0.75rem; /* Smaller text size so widgets fit */
+    flex: 1.2 !important; /* ~35% width */
+    min-width: 120px !important;
+    font-size: 0.7rem !important; /* Smaller font for all sidebar text */
   }
 
-  /* 4. Compact styling for sidebar widgets on mobile */
+  /* 3. Compact Widget styling & prevent text overflow */
   .sidebar .widget {
-    padding: 6px 8px;
-    margin-bottom: 8px;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+    word-wrap: break-word !important; /* Force long words to wrap */
+    overflow-wrap: break-word !important;
+    overflow: hidden !important; /* Prevents box blowout */
   }
 
   .sidebar .widget h3 {
-    font-size: 0.85rem;
-    margin-bottom: 4px;
+    font-size: 0.8rem !important; /* Smaller widget headings */
+    margin-bottom: 6px !important;
   }
 
-  /* Shrink button and spotify player to fit mini column */
+  .sidebar .widget p,
+  .sidebar .widget li,
+  .sidebar .widget span,
+  .sidebar .widget a {
+    font-size: 0.7rem !important; /* Smaller body text inside widgets */
+  }
+
+  /* 4. Spotify & Button Adjustments */
   .banner-button {
-    font-size: 0.7rem;
-    padding: 6px 4px;
+    font-size: 0.65rem !important;
+    padding: 6px 4px !important;
     text-align: center;
   }
 
   #spotify-player {
-    height: 80px !important; /* Smaller player height */
+    height: 80px !important;
   }
 }
