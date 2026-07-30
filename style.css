@@ -51,9 +51,9 @@ header h1 {
 }
 
 header p {
-  font-family: "Buda", serif;
+  font-family: "Griffy", system-ui;
   color: #7b1fa2;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* Layout Split (Posts + Sidebar) */
@@ -100,7 +100,7 @@ main {
 
 .post p {
   font-family: 'Buda', cursive, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.6;
   margin-bottom: 12px;
   font-size: 0.95rem;
