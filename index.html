@@ -27,19 +27,26 @@
       </main>
 
       <!-- SIDEBAR WIDGETS -->
-      <aside>
+      <aside class="sidebar">
 
-        <!-- Banner Widget -->
-        <a href="#" class="btn-banner">welcome to my space!</a>
+        <!-- 1. Banner Button -->
+        <a href="#" class="banner-button">welcome to my space!</a>
 
-        <!-- Cbox / Chatbox Widget Embed -->
+        <!-- 2. Labels Widget (Placed directly below Banner) -->
         <div class="widget">
-          <h3>Chatbox</h3>
-          <!-- Replace this iframe src with your actual Cbox embed URL from cbox.ws -->
-          <iframe src="https://my.cbox.ws/hopefulromantic" width="100%" height="250" frameborder="0" scrolling="auto"></iframe>
+          <h3>Labels</h3>
+          <ul id="labels-list">
+            <!-- JavaScript inserts tags here -->
+          </ul>
         </div>
 
-        <!-- Song of The Day Widget -->
+        <!-- 3. Chatbox Widget -->
+        <div class="widget">
+          <h3>Chatbox</h3>
+          <!-- Insert your Cbox iframe/script here if applicable -->
+        </div>
+
+        <!-- 4. Song of The Day Widget -->
         <div class="widget">
           <h3>Song of The Day</h3>
           <iframe 
@@ -55,7 +62,7 @@
           </iframe>
         </div>
 
-        <!-- Interests Widget -->
+        <!-- 5. Interests Widget -->
         <div class="widget">
           <h3>Interests</h3>
           <ul>
@@ -63,7 +70,7 @@
           </ul>
         </div>
 
-        <!-- Contact Form Widget -->
+        <!-- 6. Contact Form Widget -->
         <div class="widget">
           <h3>Write me!</h3>
           <form class="contact-form" action="https://formspree.io/f/mvzepvbo" method="POST">
@@ -73,14 +80,6 @@
             <button type="submit">Send</button>
           </form>
         </div>
-
-        <!-- Labels Widget -->
-        <div class="widget">
-        <h3>Labels</h3>
-        <ul id="labels-list">
-          <!-- JavaScript will automatically insert labels here -->
-        </ul>
-      </div>
 
       </aside>
 
