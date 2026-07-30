@@ -14,8 +14,10 @@
 body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url('background.jpg');
-  background-repeat: repeat; /* Tiles the original-sized image seamlessly */
-  background-position: top left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps image sized to the screen viewport only */
   background-color: #fce4ec;
   padding: 30px 20px 20px 20px;
   color: #333;
