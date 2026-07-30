@@ -36,8 +36,8 @@ body {
 
 /* Header Banner */
 header {
-  background: #ffffff;
-  border: 3px dashed #e91e63;
+  background: #fde8ed;
+  border: 3px dashed #f4a2b8;
   border-radius: 12px;
   padding: 25px;
   text-align: center;
@@ -187,7 +187,6 @@ aside {
 /* ==========================================
    INDIVIDUAL WIDGET CUSTOMIZATION
    ========================================== */
-
 
 /* 2. Chatbox Widget */
 .widget-chatbox {
