@@ -87,11 +87,11 @@
 
         <!-- Labels Widget -->
         <div class="widget">
-          <h3>Labels</h3>
-          <ul id="labels-list">
-            <!-- JavaScript will insert dynamic label links here automatically -->
-          </ul>
-        </div>
+        <h3>Labels</h3>
+        <ul id="labels-list">
+          <!-- JavaScript will automatically insert labels here -->
+        </ul>
+      </div>
 
       </aside>
 
@@ -100,7 +100,7 @@
 
   <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const posts = document.querySelectorAll(".blog-post");
+    const posts = document.querySelectorAll("article.post");
     const labelsList = document.getElementById("labels-list");
 
     if (!labelsList || posts.length === 0) return;
@@ -120,7 +120,7 @@
       labelsList.innerHTML += `<li><a href="#" data-filter="${tag}">${tag}</a></li>`;
     });
 
-    // 3. Add filtering when a label is clicked
+    // 3. Filter posts when a label is clicked
     labelsList.addEventListener("click", function (e) {
       if (e.target.tagName === "A") {
         e.preventDefault();
