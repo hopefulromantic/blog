@@ -20,19 +20,21 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps background fixed when scrolling */
   background-color: #fce4ec;
-  padding: 30px 20px 20px 20px;
+  /* Added left/right padding to the body container fit */
+  padding: 30px 15px 20px 15px; 
   color: #333;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
-/* Overall page container width (Adjust max-width to expand/narrow full site) */
+/* Overall page container width */
 .container {
-  max-width: 800px; /* Expanded for wide PC monitors */
+  max-width: 800px;
+  width: fit-content; /* Force header and nav to match full overflow width */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Vertical gap between header, nav, and layout */
+  gap: 20px; 
 }
 
 /* ==========================================================================
@@ -100,14 +102,14 @@ header p {
 .content-wrapper {
   display: flex;
   flex-direction: row; /* Keeps side-by-side on all screens */
-  gap: 25px;           /* Gap between columns */
+  gap: 15px;           /* Slightly tighter gap so it fits closer on narrow viewports */
   width: 100%;
 }
 
 /* Left Sidebar Column */
 .sidebar-left {
-  flex: 1; /* Relative proportion (1 part width) */
-  min-width: 220px; /* Prevents column from shrinking too small */
+  flex: 1; 
+  min-width: 160px; /* Reduced so it doesn't push mobile screens out too aggressively */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -115,8 +117,8 @@ header p {
 
 /* Center Column (Blog Posts) */
 main, #main-content {
-  flex: 2.5; /* Relative proportion (2.5 parts width to give posts main focus) */
-  min-width: 350px;
+  flex: 2.5; 
+  min-width: 280px; /* Adjusted to fit nicely while preserving fixed layout */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -130,8 +132,8 @@ main, #main-content {
 
 /* Right Sidebar Column */
 aside, .sidebar {
-  flex: 1; /* Relative proportion (1 part width) */
-  min-width: 220px;
+  flex: 1; 
+  min-width: 160px; /* Reduced so it doesn't push mobile screens out too aggressively */
   display: flex;
   flex-direction: column;
   gap: 20px;
