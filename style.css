@@ -12,11 +12,15 @@
 
 /* Base Page & Background Styles */
 body {
+  font-family: 'Courier New', Courier, monospace;
   background-image: url('background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed; /* Keeps image sized to the screen viewport only */
+  background-color: #fce4ec;
+  padding: 30px 20px 20px 20px;
+  color: #333;
   image-rendering: -webkit-optimize-contrast; /* Crisp image scaling in WebKit browsers */
   image-rendering: crisp-edges;
 }
