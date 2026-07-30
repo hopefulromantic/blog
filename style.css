@@ -20,7 +20,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps background fixed when scrolling */
   background-color: #fce4ec;
-  /* Top and bottom padding only on body */
   padding: 30px 0 20px 0; 
   color: #333;
   image-rendering: -webkit-optimize-contrast;
@@ -29,9 +28,9 @@ body {
 
 /* Overall page container width */
 .container {
-  max-width: 980px;         /* Gives desktop sidebars plenty of width */
-  width: calc(100% - 30px); /* Leaves 15px spacing on left & right on ALL screens */
-  margin: 0 auto;           /* Centers site on desktop */
+  max-width: 980px;      /* Gives desktop sidebars plenty of width */
+  width: fit-content;    /* Keeps header, nav, and columns locked at identical width */
+  margin: 0 auto;        /* Perfectly centers the entire block */
   display: flex;
   flex-direction: column;
   gap: 20px; 
@@ -109,7 +108,7 @@ header p {
 /* Left Sidebar Column */
 .sidebar-left {
   flex: 1; 
-  min-width: 220px;    /* Restored width so widgets don't feel squished */
+  min-width: 220px;    /* Restored width for desktop */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -133,10 +132,22 @@ main, #main-content {
 /* Right Sidebar Column */
 aside, .sidebar {
   flex: 1; 
-  min-width: 230px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
+  min-width: 235px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+/* ==========================================================================
+   MOBILE PORTRAIT EDGE PADDING FIX
+   ========================================================================== */
+@media screen and (max-width: 820px) {
+  body {
+    /* Forces horizontal padding on screen viewports narrower than the 3-column width */
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    min-width: max-content; /* Prevents edge-clipping when scrolling sideways */
+  }
 }
 
 /* ==========================================================================
