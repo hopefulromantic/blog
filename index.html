@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <header>
       <h1>blog spot of a hopeful romantic</h1>
-      <p><b>a space curated to be an archive of my rawest form of self</b></p>
+      <p>a space curated to be an archive of my rawest form of self</p>
     </header>
 
     <div class="content-wrapper">
@@ -25,7 +25,7 @@
       <main>
         
         <!-- Post 1 -->
-        <article class="post">
+        <article class="blog-post" data-tags="blog">
           <div class="post-date">Wednesday, 29 July 2026</div>
           <h2>Creating a Blog As An Act of Self Love</h2>
           <p>I looked up the definiton of a blog today, but it didn't quite resonate with what I thought this space was actually capable of doing.</p>
@@ -88,9 +88,8 @@
         <!-- Labels Widget -->
         <div class="widget">
           <h3>Labels</h3>
-          <ul>
-            <li><a href="#">books</a></li>
-            <li><a href="#">media</a></li>
+          <ul id="labels-list">
+            <!-- JavaScript will insert dynamic label links here automatically -->
           </ul>
         </div>
 
@@ -98,6 +97,50 @@
 
     </div>
   </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const posts = document.querySelectorAll(".blog-post");
+    const labelsList = document.getElementById("labels-list");
+
+    if (!labelsList || posts.length === 0) return;
+
+    // 1. Collect all unique tags from your posts
+    const allTags = new Set();
+    posts.forEach(post => {
+      const tags = post.getAttribute("data-tags");
+      if (tags) {
+        tags.split(",").forEach(tag => allTags.add(tag.trim()));
+      }
+    });
+
+    // 2. Build the sidebar Labels menu automatically
+    labelsList.innerHTML = '<li><a href="#" data-filter="all">all</a></li>';
+    allTags.forEach(tag => {
+      labelsList.innerHTML += `<li><a href="#" data-filter="${tag}">${tag}</a></li>`;
+    });
+
+    // 3. Add filtering when a label is clicked
+    labelsList.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        e.preventDefault();
+        const selectedTag = e.target.getAttribute("data-filter");
+
+        posts.forEach(post => {
+          const postTags = post.getAttribute("data-tags") 
+            ? post.getAttribute("data-tags").split(",").map(t => t.trim()) 
+            : [];
+
+          if (selectedTag === "all" || postTags.includes(selectedTag)) {
+            post.style.display = "block";
+          } else {
+            post.style.display = "none";
+          }
+        });
+      }
+    });
+  });
+  </script>
 
 </body>
 </html>
