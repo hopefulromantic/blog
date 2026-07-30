@@ -177,10 +177,10 @@ aside {
   font-size: 1.8rem;
   text-decoration: none;
   border-radius: 8px;
-  border: 2px solid #ffffff;
+  border: 2px solid #81c784;
 }
 
-.btn-banner:hover {
+.banner-button:hover {
   background: #d81b60;
 }
 
