@@ -132,7 +132,7 @@ main, #main-content {
 /* Right Sidebar Column */
 aside, .sidebar {
   flex: 1; 
-  min-width: 235px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
+  min-width: 300px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
   display: flex;
   flex-direction: column;
   gap: 20px;
