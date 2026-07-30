@@ -1,38 +1,43 @@
-/* Import Ruge Boogie from Google Fonts */
+/* ==========================================================================
+   1. FONTS IMPORT
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Butterfly+Kids&family=Griffy&family=Purple+Purse&family=Ruge+Boogie&display=swap');
 
-/* General Page Reset & Base Styles */
+/* ==========================================================================
+   2. GENERAL RESET & BASE PAGE STYLES
+   ========================================================================== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base Page & Background Styles */
 body {
   font-family: 'Courier New', Courier, monospace;
   background-image: url('background.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps image sized to the screen viewport only */
+  background-attachment: fixed; /* Keeps background fixed when scrolling */
   background-color: #fce4ec;
   padding: 30px 20px 20px 20px;
   color: #333;
-  image-rendering: -webkit-optimize-contrast; /* Crisp image scaling in WebKit browsers */
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
-/* Main Container */
+/* Overall page container width (Adjust max-width to expand/narrow full site) */
 .container {
-  max-width: 1100px; /* Slightly expanded to comfortably fit 3 columns */
+  max-width: 1400px; /* Expanded for wide PC monitors */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 20px; /* Vertical gap between header, nav, and layout */
 }
 
-/* Header Banner */
+/* ==========================================================================
+   3. HEADER BANNER
+   ========================================================================== */
 header {
   background: #fde8ed;
   border: 3px dashed #f4a2b8;
@@ -44,24 +49,25 @@ header {
 header h1 {
   font-family: 'Ruge Boogie', cursive;
   color: #d81b60;
-  font-size: 3.5rem; /* Increased slightly since script fonts often render smaller */
+  font-size: 3.5rem; /* Adjust title text size */
   margin-bottom: 5px;
 }
 
 header p {
   font-family: "Griffy", system-ui;
   color: #7b1fa2;
-  font-size: 1.3rem;
+  font-size: 1.3rem; /* Adjust subtitle text size */
 }
 
-/* Floating Navigation Bar Above Content */
+/* ==========================================================================
+   4. FLOATING NAVIGATION BAR
+   ========================================================================== */
 .blog-nav {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Center-align buttons */
   align-items: center;
-  gap: 30px;
-  margin: 10px 0 20px 0;
-  flex-wrap: wrap;
+  gap: 35px;               /* Horizontal gap between text buttons */
+  margin: 10px 0 10px 0;   /* Top and bottom margins */
   width: 100%;
 }
 
@@ -69,47 +75,48 @@ header p {
 .nav-link:visited,
 .nav-link:active {
   font-family: 'Purple Purse', serif !important;
-  font-size: 1.4rem !important;
-  color: #c2185b !important;
-  text-decoration: none !important;
+  font-size: 1.5rem !important;    /* Adjust button text size */
+  color: #c2185b !important;       /* Normal button text color */
+  text-decoration: none !important;/* Removes underlines */
   background: transparent !important;
   border: none !important;
   outline: none !important;
   transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
-  color: #d81b60 !important;
-  opacity: 0.8;
-  transform: translateY(-2px);
+  color: #d81b60 !important;       /* Text color on hover */
+  opacity: 0.8;                     /* Hover transparency */
+  transform: translateY(-3px);      /* Lifts text up slightly on hover */
   text-decoration: none !important;
 }
 
-/* Layout Split (3-Column Layout) */
+/* ==========================================================================
+   5. FIXED 3-COLUMN LAYOUT (No stacking on small screens)
+   ========================================================================== */
 .content-wrapper {
   display: flex;
-  gap: 20px;
-}
-
-@media (max-width: 900px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
+  flex-direction: row; /* Keeps side-by-side on all screens */
+  gap: 25px;           /* Gap between columns */
+  width: 100%;
 }
 
 /* Left Sidebar Column */
 .sidebar-left {
-  flex: 1;
+  flex: 1; /* Relative proportion (1 part width) */
+  min-width: 220px; /* Prevents column from shrinking too small */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Main Posts Column (Center) */
-main {
-  flex: 2;
+/* Center Column (Blog Posts) */
+main, #main-content {
+  flex: 2.5; /* Relative proportion (2.5 parts width to give posts main focus) */
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -121,6 +128,18 @@ main {
   gap: 20px;
 }
 
+/* Right Sidebar Column */
+aside, .sidebar {
+  flex: 1; /* Relative proportion (1 part width) */
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ==========================================================================
+   6. POST CARDS STYLING
+   ========================================================================== */
 .post {
   background: #ffffff;
   border: 2px solid #e91e63;
@@ -141,7 +160,7 @@ main {
   font-family: 'Purple Purse', serif;
   color: #c2185b;
   margin-bottom: 12px;
-  font-size: 1.5rem; /* Adjusted for better visibility */
+  font-size: 1.5rem;
 }
 
 .post p {
@@ -169,14 +188,9 @@ main {
   text-decoration: none;
 }
 
-/* Right Sidebar Column */
-aside, .sidebar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
+/* ==========================================================================
+   7. WIDGET BASE STYLING & BANNER BUTTON
+   ========================================================================== */
 .widget {
   background: #ffffff;
   border: 2px solid #81c784;
@@ -187,7 +201,7 @@ aside, .sidebar {
 .widget h3 {
   font-family: 'Purple Purse', serif;
   color: #2e7d32;
-  font-size: 1.2rem; /* Adjusted for better visibility */
+  font-size: 1.2rem;
   margin-bottom: 10px;
   border-bottom: 2px dashed #aed581;
   padding-bottom: 4px;
@@ -211,7 +225,6 @@ aside, .sidebar {
   text-decoration: underline;
 }
 
-/* Banner Button Widget */
 .banner-button {
   display: block;
   background: #e91e63;
@@ -230,10 +243,10 @@ aside, .sidebar {
   background: #d81b60;
 }
 
-/* ==========================================
-   INDIVIDUAL WIDGET CUSTOMIZATION
-   ========================================== */
-
+/* ==========================================================================
+   8. INDIVIDUAL WIDGET COLORING
+   ========================================================================== */
+/* Labels Widget */
 .widget-labels {
   background-color: #ffffff;
   border: none;
@@ -244,7 +257,7 @@ aside, .sidebar {
   border-bottom-color: #aed581;
 }
 
-/* 2. Chatbox Widget */
+/* Chatbox Widget */
 .widget-chatbox {
   background-color: #e8f4f8;
   border-color: #a3d5e8;
@@ -254,7 +267,7 @@ aside, .sidebar {
   border-bottom-color: #a3d5e8;
 }
 
-/* 3. Song of The Day (Spotify) Widget */
+/* Spotify Widget */
 .widget-spotify {
   background-color: #eafaf1;
   border-color: #81c784;
@@ -264,7 +277,7 @@ aside, .sidebar {
   border-bottom-color: #aed581;
 }
 
-/* 4. Interests Widget */
+/* Interests Widget */
 .widget-interests {
   background-color: #fde8ed;
   border-color: #f4a2b8;
@@ -274,7 +287,7 @@ aside, .sidebar {
   border-bottom-color: #f4a2b8;
 }
 
-/* 5. Contact Form Widget */
+/* Contact Form Widget */
 .widget-contact {
   background-color: #fff8e7;
   border-color: #f39c12;
@@ -284,7 +297,7 @@ aside, .sidebar {
   border-bottom-color: #f39c12;
 }
 
-/* Contact Form Input Styles */
+/* Contact Form Input Controls */
 .contact-form input, 
 .contact-form textarea {
   width: 100%;
@@ -306,88 +319,4 @@ aside, .sidebar {
 
 .contact-form button:hover {
   background: #66bb6a;
-}
-
-/* ==========================================
-   PORTRAIT MOBILE ONLY (Screens under 600px)
-   ========================================== */
-@media (max-width: 599px) {
-  /* 1. Header: Compact box and much smaller font sizes */
-  header {
-    padding: 8px 12px !important; /* Minimal header padding */
-    margin-bottom: 10px !important;
-  }
-
-  header h1 {
-    font-size: 1.2rem !important; /* Significantly smaller blog title */
-    margin-bottom: 1px !important;
-  }
-
-  header p {
-    font-size: 0.65rem !important; /* Minimal subtitle */
-    opacity: 0.8;
-  }
-
-  .blog-nav {
-    gap: 10px !important;
-    margin-bottom: 10px !important;
-  }
-
-  .nav-link {
-    font-size: 0.85rem !important;
-  }
-
-  /* 2. Layout: Forced side-by-side positioning */
-  .content-wrapper {
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 8px !important; /* Small gap to maximize space */
-  }
-
-  /* Main Post Column (Center) */
-  #main-content, main {
-    flex: 6 !important;
-    min-width: 0 !important;
-  }
-
-  /* Sidebars */
-  aside, .sidebar, .sidebar-left {
-    flex: 4 !important;
-    min-width: 130px !important; /* Slightly wider minimum to prevent blowout */
-  }
-
-  /* 3. Text & Box control inside columns */
-  .sidebar .widget, .sidebar-left .widget {
-    padding: 8px !important;
-    margin-bottom: 10px !important;
-    
-    /* Strong word breaking for long text/links */
-    word-break: break-all !important; 
-    overflow-wrap: break-word !important; 
-    overflow: hidden !important; 
-  }
-
-  /* 4. Global Font Size reduction */
-  .sidebar *, .sidebar-left * {
-    font-size: 0.65rem !important; /* Sets everything in the sidebar small */
-  }
-
-  /* Slightly differentiate widget titles */
-  .sidebar .widget h3, .sidebar-left .widget h3 {
-    font-size: 0.75rem !important;
-    font-weight: bold;
-    margin-bottom: 5px !important;
-  }
-
-  /* 5. Spotify & Button Finetuning */
-  .banner-button {
-    font-size: 0.65rem !important;
-    padding: 5px 3px !important;
-    text-align: center;
-    border-radius: 4px;
-  }
-
-  #spotify-player {
-    height: 80px !important;
-  }
 }
