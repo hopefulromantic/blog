@@ -188,15 +188,6 @@ aside {
    INDIVIDUAL WIDGET CUSTOMIZATION
    ========================================== */
 
-/* 1. Labels Widget */
-.widget-labels {
-  background-color: #f0ebf8;
-  border-color: #9283d2;
-}
-.widget-labels h3 {
-  color: #5c41a8;
-  border-bottom-color: #9283d2;
-}
 
 /* 2. Chatbox Widget */
 .widget-chatbox {
