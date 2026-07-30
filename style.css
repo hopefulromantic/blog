@@ -210,67 +210,70 @@ aside {
    PORTRAIT MOBILE ONLY (Screens under 600px)
    ========================================== */
 @media (max-width: 599px) {
-  /* 1. Scale down Header height & padding */
+  /* 1. Header: Compact box and much smaller font sizes */
   header {
-    padding: 10px 15px !important;
-    margin-bottom: 12px !important;
+    padding: 8px 12px !important; /* Minimal header padding */
+    margin-bottom: 10px !important;
   }
 
   header h1 {
-    font-size: 1.5rem !important; /* Smaller blog title */
-    margin-bottom: 2px !important;
+    font-size: 1.2rem !important; /* Significantly smaller blog title */
+    margin-bottom: 1px !important;
   }
 
   header p {
-    font-size: 0.75rem !important; /* Smaller subtitle */
+    font-size: 0.65rem !important; /* Minimal subtitle */
+    opacity: 0.8;
   }
 
-  /* 2. Side-by-side Layout with increased sidebar width */
+  /* 2. Layout: Forced 2-column side-by-side */
   .content-wrapper {
     display: flex !important;
     flex-direction: row !important;
-    gap: 8px !important;
+    gap: 8px !important; /* Small gap to maximize space */
   }
 
-  /* Main Post Column */
+  /* Main Post Column (60% width) */
   #posts-container {
-    flex: 2 !important; /* ~65% width */
+    flex: 6 !important;
     min-width: 0 !important;
   }
 
-  /* Right Sidebar (Slightly wider to fill gap) */
+  /* Right Sidebar (40% width) */
   aside, .sidebar {
-    flex: 1.2 !important; /* ~35% width */
-    min-width: 120px !important;
-    font-size: 0.7rem !important; /* Smaller font for all sidebar text */
+    flex: 4 !important;
+    min-width: 130px !important; /* Slightly wider minimum to prevent blowout */
   }
 
-  /* 3. Compact Widget styling & prevent text overflow */
+  /* 3. Text & Box control inside the right column */
   .sidebar .widget {
     padding: 8px !important;
     margin-bottom: 10px !important;
-    word-wrap: break-word !important; /* Force long words to wrap */
-    overflow-wrap: break-word !important;
-    overflow: hidden !important; /* Prevents box blowout */
+    
+    /* Strong word breaking for long text/links */
+    word-break: break-all !important; 
+    overflow-wrap: break-word !important; 
+    overflow: hidden !important; 
   }
 
+  /* 4. Global Font Size reduction for the entire right side */
+  .sidebar * {
+    font-size: 0.65rem !important; /* Sets everything in the sidebar small */
+  }
+
+  /* Slightly differentiate widget titles */
   .sidebar .widget h3 {
-    font-size: 0.8rem !important; /* Smaller widget headings */
-    margin-bottom: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: bold;
+    margin-bottom: 5px !important;
   }
 
-  .sidebar .widget p,
-  .sidebar .widget li,
-  .sidebar .widget span,
-  .sidebar .widget a {
-    font-size: 0.7rem !important; /* Smaller body text inside widgets */
-  }
-
-  /* 4. Spotify & Button Adjustments */
+  /* 5. Spotify & Button Finetuning */
   .banner-button {
     font-size: 0.65rem !important;
-    padding: 6px 4px !important;
+    padding: 5px 3px !important;
     text-align: center;
+    border-radius: 4px;
   }
 
   #spotify-player {
