@@ -28,7 +28,7 @@ body {
 
 /* Overall page container width (Adjust max-width to expand/narrow full site) */
 .container {
-  max-width: 100px; /* Expanded for wide PC monitors */
+  max-width: 400px; /* Expanded for wide PC monitors */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
