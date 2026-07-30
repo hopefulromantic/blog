@@ -189,6 +189,12 @@ aside {
    INDIVIDUAL WIDGET CUSTOMIZATION
    ========================================== */
 
+.widget-labels {
+  background-color: #f0ebf8;
+  border: 2px dashed #9283d2; /* Keeps dashed border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 /* 2. Chatbox Widget */
 .widget-chatbox {
   background-color: #e8f4f8;
