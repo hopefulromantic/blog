@@ -1,9 +1,19 @@
-[
-  {
-    "title": "Creating a Blog As An Act of Self Love",
-    "date": "Wednesday, 29 July 2026",
-    "time": "11:08 PM",
-    "tags": "blog",
-    "content": "I looked up the definiton of a blog today, but it didn't quite resonate with what I thought this space was actually capable of doing."
-  }
-]
+{
+  "spotifyTrackId": "6w2rrJsn8Qpa7veSaVAyKh",
+  "posts": [
+    {
+      "title": "My Second Blog Post Title",
+      "date": "Thursday, 30 July 2026",
+      "time": "3:30 PM",
+      "tags": "personal, update",
+      "content": "This is where your new post content goes!"
+    },
+    {
+      "title": "Creating a Blog As An Act of Self Love",
+      "date": "Wednesday, 29 July 2026",
+      "time": "11:08 PM",
+      "tags": "blog",
+      "content": "I looked up the definiton of a blog today, but it didn't quite resonate with what I thought this space was actually capable of doing."
+    }
+  ]
+}

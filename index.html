@@ -43,6 +43,7 @@
         <div class="widget">
           <h3>Song of The Day</h3>
           <iframe 
+            id="spotify-player"
             style="border-radius:12px" 
             src="https://open.spotify.com/embed/track/6w2rrJsn8Qpa7veSaVAyKh?utm_source=generator" 
             width="100%" 
@@ -90,26 +91,32 @@
   document.addEventListener("DOMContentLoaded", function () {
     const postsContainer = document.getElementById("posts-container");
     const labelsList = document.getElementById("labels-list");
+    const spotifyPlayer = document.getElementById("spotify-player");
 
     fetch("posts.json")
       .then(response => response.json())
-      .then(posts => {
+      .then(data => {
+        // 1. Update Spotify Player track automatically if present in JSON
+        if (data.spotifyTrackId && spotifyPlayer) {
+          spotifyPlayer.src = `https://open.spotify.com/embed/track/${data.spotifyTrackId}?utm_source=generator`;
+        }
+
+        // 2. Render Blog Posts
+        const posts = data.posts || [];
         postsContainer.innerHTML = "";
         const allTags = new Set();
 
         posts.forEach(post => {
-          // Collect tags for Labels widget
           if (post.tags) {
             post.tags.split(",").forEach(tag => allTags.add(tag.trim()));
           }
 
-          // Generate Post Card HTML
           const postElement = document.createElement("article");
           postElement.className = "post";
           postElement.setAttribute("data-tags", post.tags || "");
 
           postElement.innerHTML = `
-            <div class="post-date">> ${post.date}</div>
+            <div class="post-date">${post.date}</div>
             <h2>${post.title}</h2>
             <p>${post.content}</p>
             <div class="post-footer">
@@ -120,14 +127,13 @@
           postsContainer.appendChild(postElement);
         });
 
-        // Build Labels widget automatically
+        // 3. Build Labels widget automatically
         if (labelsList) {
           labelsList.innerHTML = '<li><a href="#" data-filter="all">all</a></li>';
           allTags.forEach(tag => {
             labelsList.innerHTML += `<li><a href="#" data-filter="${tag}">${tag}</a></li>`;
           });
 
-          // Add filter functionality when clicking labels
           labelsList.addEventListener("click", function (e) {
             if (e.target.tagName === "A") {
               e.preventDefault();
@@ -149,7 +155,7 @@
           });
         }
       })
-      .catch(error => console.error("Error loading posts:", error));
+      .catch(error => console.error("Error loading JSON data:", error));
   });
   </script>
 
