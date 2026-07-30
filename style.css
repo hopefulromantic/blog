@@ -190,9 +190,13 @@ aside {
    ========================================== */
 
 .widget-labels {
-  background-color: #f0ebf8;
-  border: 2px dashed #9283d2; /* Keeps dashed border */
+  background-color: #eafaf1;
+  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.widget-labels h3 {
+  color: #2e7d32;
+  border-bottom-color: #aed581;
 }
 
 /* 2. Chatbox Widget */
