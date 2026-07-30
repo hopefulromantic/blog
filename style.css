@@ -19,6 +19,8 @@ body {
   background-color: #fce4ec;
   padding: 30px 20px 20px 20px;
   color: #333;
+  image-rendering: -webkit-optimize-contrast; /* Crisp image scaling in WebKit browsers */
+  image-rendering: crisp-edges;
 }
 
 /* Main Container */
