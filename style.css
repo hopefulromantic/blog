@@ -20,8 +20,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps background fixed when scrolling */
   background-color: #fce4ec;
-  /* Added left/right padding to the body container fit */
-  padding: 30px 15px 20px 15px; 
+  /* Top and bottom padding only on body */
+  padding: 30px 0 20px 0; 
   color: #333;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
@@ -29,9 +29,9 @@ body {
 
 /* Overall page container width */
 .container {
-  max-width: 800px;
-  width: fit-content; /* Force header and nav to match full overflow width */
-  margin: 0 auto;
+  max-width: 980px;         /* Gives desktop sidebars plenty of width */
+  width: calc(100% - 30px); /* Leaves 15px spacing on left & right on ALL screens */
+  margin: 0 auto;           /* Centers site on desktop */
   display: flex;
   flex-direction: column;
   gap: 20px; 
@@ -102,14 +102,14 @@ header p {
 .content-wrapper {
   display: flex;
   flex-direction: row; /* Keeps side-by-side on all screens */
-  gap: 15px;           /* Slightly tighter gap so it fits closer on narrow viewports */
+  gap: 20px;           /* Clean spacing between columns */
   width: 100%;
 }
 
 /* Left Sidebar Column */
 .sidebar-left {
   flex: 1; 
-  min-width: 160px; /* Reduced so it doesn't push mobile screens out too aggressively */
+  min-width: 220px;    /* Restored width so widgets don't feel squished */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -118,7 +118,7 @@ header p {
 /* Center Column (Blog Posts) */
 main, #main-content {
   flex: 2.5; 
-  min-width: 280px; /* Adjusted to fit nicely while preserving fixed layout */
+  min-width: 320px;    /* Roomy center column for posts */
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -133,7 +133,7 @@ main, #main-content {
 /* Right Sidebar Column */
 aside, .sidebar {
   flex: 1; 
-  min-width: 160px; /* Reduced so it doesn't push mobile screens out too aggressively */
+  min-width: 230px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
   display: flex;
   flex-direction: column;
   gap: 20px;
