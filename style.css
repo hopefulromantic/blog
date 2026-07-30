@@ -12,13 +12,11 @@
 
 /* Base Page & Background Styles */
 body {
-  font-family: 'Courier New', Courier, monospace;
   background-image: url('background.jpg');
-  background-repeat: repeat; /* Tiles the original-sized image seamlessly */
-  background-position: top left;
-  background-color: #fce4ec;
-  padding: 30px 20px 20px 20px;
-  color: #333;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   image-rendering: -webkit-optimize-contrast; /* Crisp image scaling in WebKit browsers */
   image-rendering: crisp-edges;
 }
