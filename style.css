@@ -184,6 +184,60 @@ aside {
   background: #d81b60;
 }
 
+/* ==========================================
+   INDIVIDUAL WIDGET CUSTOMIZATION
+   ========================================== */
+
+/* 1. Labels Widget */
+.widget-labels {
+  background-color: #f0ebf8;
+  border-color: #9283d2;
+}
+.widget-labels h3 {
+  color: #5c41a8;
+  border-bottom-color: #9283d2;
+}
+
+/* 2. Chatbox Widget */
+.widget-chatbox {
+  background-color: #e8f4f8;
+  border-color: #a3d5e8;
+}
+.widget-chatbox h3 {
+  color: #2b7a9e;
+  border-bottom-color: #a3d5e8;
+}
+
+/* 3. Song of The Day (Spotify) Widget */
+.widget-spotify {
+  background-color: #eafaf1;
+  border-color: #81c784;
+}
+.widget-spotify h3 {
+  color: #2e7d32;
+  border-bottom-color: #aed581;
+}
+
+/* 4. Interests Widget */
+.widget-interests {
+  background-color: #fde8ed;
+  border-color: #f4a2b8;
+}
+.widget-interests h3 {
+  color: #c0392b;
+  border-bottom-color: #f4a2b8;
+}
+
+/* 5. Contact Form Widget */
+.widget-contact {
+  background-color: #fff8e7;
+  border-color: #f39c12;
+}
+.widget-contact h3 {
+  color: #d35400;
+  border-bottom-color: #f39c12;
+}
+
 /* Contact Form Input Styles */
 .contact-form input, 
 .contact-form textarea {
