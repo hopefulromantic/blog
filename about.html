@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about - blog spot of a hopeful romantic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Buda:wght@300&family=Butterfly+Kids&family=Griffy&family=Purple+Purse&family=Ruge+Boogie&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <header>
+      <h1>blog spot of a hopeful romantic</h1>
+      <p><!-- blog description --></p>
+    </header>
+
+    <nav class="blog-nav">
+      <a href="index.html" class="nav-link">blog</a>
+      <a href="about.html" class="nav-link">about</a>
+      <a href="gallery.html" class="nav-link">gallery</a>
+      <a href="creations.html" class="nav-link">creations</a>
+      <a href="lists.html" class="nav-link">lists</a>
+    </nav>
+
+    <div class="content-wrapper">
+      
+      <aside class="sidebar-left">
+        <iframe 
+          data-testid="embed-iframe" 
+          style="border-radius:12px" 
+          src="https://open.spotify.com/embed/playlist/3acLZze2hmeSQP9ghQXsfB?utm_source=generator&si=184b89d3e1dc49b6" 
+          width="100%" 
+          height="352" 
+          frameBorder="0" 
+          allowfullscreen="" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy">
+        </iframe>
+
+        <iframe 
+          src="https://hopefulromantic.github.io/countdown/" 
+          class="widget-countdown"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+      </aside>
+
+      <main id="main-content">
+        <article class="post">
+          <h2>About Me</h2>
+          <p>Hello! Welcome to my space. I'm a hopeful romantic striving to capture thoughts, ideas, and self-growths through writing and coding.</p>
+        </article>
+
+        <article class="post">
+          <h2>Interests</h2>
+          <p>My current hyperfixations and passions include volleyball, communications, coding, speech pathology, and my personal rebrand journey.</p>
+        </article>
+
+        <article class="post">
+          <h2>Why This Blog?</h2>
+          <p>Creating this blog is an act of self-love and self-expression—a tiny home on the internet to romanticize daily steps forward.</p>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <a href="#" class="banner-button">welcome to my space!</a>
+
+        <div class="widget widget-chatbox">
+          <h3>Chatbox</h3>
+          <iframe src="https://my.cbox.ws/hopefulromantic" width="100%" height="250" frameborder="0" scrolling="auto"></iframe>
+        </div>
+
+        <div class="widget widget-interests">
+          <h3>Interests</h3>
+          <ul>
+            <li>volleyball, communications, coding, speech pathology, self-rebrand</li>
+          </ul>
+        </div>
+
+        <div class="widget widget-contact">
+          <h3>Write me!</h3>
+          <form class="contact-form" action="https://formspree.io/f/mvzepvbo" method="POST">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="3" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+</body>
+</html>

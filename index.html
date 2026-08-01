@@ -21,19 +21,18 @@
 
     <!-- FLOATING NAVIGATION BAR -->
     <nav class="blog-nav">
-      <a href="index.html" class="nav-link">home</a>
+      <a href="index.html" class="nav-link">blog</a>
       <a href="about.html" class="nav-link">about</a>
       <a href="gallery.html" class="nav-link">gallery</a>
-      <a href="archive.html" class="nav-link">archive</a>
-      <a href="contact.html" class="nav-link">contact</a>
+      <a href="creations.html" class="nav-link">creations</a>
+      <a href="lists.html" class="nav-link">lists</a>
     </nav>
 
     <!-- 3-COLUMN LAYOUT WRAPPER -->
     <div class="content-wrapper">
       
-      <!-- LEFT SIDEBAR (Column 1) -->
+      <!-- LEFT SIDEBAR -->
       <aside class="sidebar-left">
-
         <iframe 
           data-testid="embed-iframe" 
           style="border-radius:12px" 
@@ -46,44 +45,35 @@
           loading="lazy">
         </iframe>
 
-        <!-- Countdown Embed Widget -->
         <iframe 
           src="https://hopefulromantic.github.io/countdown/" 
           class="widget-countdown"
           frameborder="0"
           scrolling="no">
         </iframe>
-
       </aside>
 
-      <!-- MAIN BLOG POSTS (Column 2 - Center) -->
+      <!-- MAIN BLOG POSTS -->
       <main id="main-content">
         <div id="posts-container">
-          <!-- Posts from posts.json will appear here automatically -->
+          <!-- Posts from posts.json load here -->
         </div>
       </main>
 
-      <!-- RIGHT SIDEBAR WIDGETS (Column 3) -->
+      <!-- RIGHT SIDEBAR WIDGETS -->
       <aside class="sidebar">
-
-        <!-- 1. Banner Button -->
         <a href="#" class="banner-button">welcome to my space!</a>
 
-        <!-- 2. Chatbox Widget -->
         <div class="widget widget-chatbox">
           <h3>Chatbox</h3>
           <iframe src="https://my.cbox.ws/hopefulromantic" width="100%" height="250" frameborder="0" scrolling="auto"></iframe>
         </div>
         
-        <!-- 3. Labels Widget -->
         <div class="widget widget-labels">
           <h3>Labels</h3>
-          <ul id="labels-list">
-            <!-- JavaScript inserts tags here -->
-          </ul>
+          <ul id="labels-list"></ul>
         </div>
 
-        <!-- 5. Interests Widget -->
         <div class="widget widget-interests">
           <h3>Interests</h3>
           <ul>
@@ -91,7 +81,6 @@
           </ul>
         </div>
 
-        <!-- 6. Contact Form Widget -->
         <div class="widget widget-contact">
           <h3>Write me!</h3>
           <form class="contact-form" action="https://formspree.io/f/mvzepvbo" method="POST">
@@ -101,7 +90,6 @@
             <button type="submit">Send</button>
           </form>
         </div>
-
       </aside>
 
     </div>
@@ -111,17 +99,10 @@
   document.addEventListener("DOMContentLoaded", function () {
     const postsContainer = document.getElementById("posts-container");
     const labelsList = document.getElementById("labels-list");
-    const spotifyPlayer = document.getElementById("spotify-player");
 
     fetch("posts.json")
       .then(response => response.json())
       .then(data => {
-        // 1. Update Spotify Player track automatically if present in JSON
-        if (data.spotifyTrackId && spotifyPlayer) {
-          spotifyPlayer.src = `https://open.spotify.com/embed/track/${data.spotifyTrackId}?utm_source=generator`;
-        }
-
-        // 2. Render Blog Posts
         const posts = data.posts || [];
         postsContainer.innerHTML = "";
         const allTags = new Set();
@@ -147,7 +128,6 @@
           postsContainer.appendChild(postElement);
         });
 
-        // 3. Build Labels widget automatically
         if (labelsList) {
           labelsList.innerHTML = '<li><a href="#" data-filter="all">all</a></li>';
           allTags.forEach(tag => {
