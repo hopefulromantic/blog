@@ -70,7 +70,7 @@ header p {
   justify-content: center; /* Center-align buttons */
   align-items: center;
   gap: 35px;               /* Horizontal gap between text buttons */
-  margin: 10px 0 10px 0;   /* Top and bottom margins */
+  margin: -5px 0 10px 0;   /* Top and bottom margins */
   width: 100%;
 }
 
@@ -78,12 +78,18 @@ header p {
 .nav-link:visited,
 .nav-link:active {
   font-family: 'Purple Purse', serif !important;
-  font-size: 1.7rem !important;    /* Adjust button text size */
-  color: #c2185b !important;       /* Normal button text color */
+  font-size: 1.5rem !important;    /* Adjust button text size */
+  color: #7b1fa2 !important;       /* Normal button text color */
   text-decoration: none !important;/* Removes underlines */
   background: transparent !important;
   border: none !important;
   outline: none !important;
+
+  /* Text-only light yellow glow effect */
+    text-shadow: 0 0 5px #fff59d, 
+                0 0 10px #ffeb3b, 
+                0 0 15px rgba(255, 235, 59, 0.8) !important;
+
   transition: transform 0.2s ease, color 0.2s ease, opacity 0.2s ease;
   cursor: pointer;
   display: inline-block;
@@ -91,9 +97,13 @@ header p {
 }
 
 .nav-link:hover {
-  color: #d81b60 !important;       /* Text color on hover */
-  opacity: 0.8;                     /* Hover transparency */
-  transform: translateY(-3px);      /* Lifts text up slightly on hover */
+  color: #4a148c !important;            /* Darker purple text on hover */
+  transform: translateY(-2px);          /* Gentle lift on hover */
+  
+  /* Brighter text glow on hover */
+  text-shadow: 0 0 8px #ffff00, 
+               0 0 16px #ffeb3b, 
+               0 0 24px rgba(255, 235, 59, 1) !important;
   text-decoration: none !important;
 }
 
@@ -208,7 +218,7 @@ aside, .sidebar {
    ========================================================================== */
 .widget {
   background: #ffffff;
-  border: 2px solid #81c784;
+  border: 2px solid #ffffff;
   border-radius: 8px;
   padding: 15px;
 }
