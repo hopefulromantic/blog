@@ -28,9 +28,9 @@ body {
 
 /* Overall page container width */
 .container {
-  max-width: 650px; /* Or 1000px depending on your target width */
-  width: 100%;       /* Allows the container to fill up to max-width */
-  margin: 0 auto;
+  max-width: 1150px;      /* Gives desktop sidebars plenty of width */
+  width: fit-content;    /* Keeps header, nav, and columns locked at identical width */
+  margin: 0 auto;        /* Perfectly centers the entire block */
   display: flex;
   flex-direction: column;
   gap: 20px; 
