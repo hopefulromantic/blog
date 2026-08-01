@@ -40,8 +40,8 @@ body {
    3. HEADER BANNER
    ========================================================================== */
 header {
-    width: 100%;          /* Forces header to fill the full width of the container */
-    max-width: 100%;      /* Allows it to match the width of the columns below */
+    width: 75%;          /* Forces header to fill the full width of the container */
+    max-width: 75%;      /* Allows it to match the width of the columns below */
     margin: 0 auto 20px;
     background: #fde8ed;
     border: 3px dashed #f4a2b8;
