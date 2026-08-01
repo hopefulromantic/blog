@@ -108,7 +108,7 @@ header p {
 /* Left Sidebar Column */
 .sidebar-left {
   flex: 1; 
-  min-width: 220px;    /* Restored width for desktop */
+  min-width: 300px;    /* Restored width for desktop */
   display: flex;
   flex-direction: column;
   gap: 20px;
