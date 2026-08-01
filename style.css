@@ -28,7 +28,7 @@ body {
 
 /* Overall page container width */
 .container {
-  max-width: 980px;      /* Gives desktop sidebars plenty of width */
+  max-width: 1150px;      /* Gives desktop sidebars plenty of width */
   width: fit-content;    /* Keeps header, nav, and columns locked at identical width */
   margin: 0 auto;        /* Perfectly centers the entire block */
   display: flex;
@@ -40,6 +40,8 @@ body {
    3. HEADER BANNER
    ========================================================================== */
 header {
+  max-width: 960px;      /* Restricts ONLY the header width */
+  margin: 0 auto 20px;   /* Centers the header horizontally */
   background: #fde8ed;
   border: 3px dashed #f4a2b8;
   border-radius: 12px;
@@ -76,7 +78,7 @@ header p {
 .nav-link:visited,
 .nav-link:active {
   font-family: 'Purple Purse', serif !important;
-  font-size: 1.5rem !important;    /* Adjust button text size */
+  font-size: 1.7rem !important;    /* Adjust button text size */
   color: #c2185b !important;       /* Normal button text color */
   text-decoration: none !important;/* Removes underlines */
   background: transparent !important;
@@ -107,7 +109,7 @@ header p {
 
 /* Left Sidebar Column */
 .sidebar-left {
-  flex: 1; 
+  flex: 0 0 280px; 
   min-width: 280px;    /* Restored width for desktop */
   display: flex;
   flex-direction: column;
@@ -116,7 +118,7 @@ header p {
 
 /* Center Column (Blog Posts) */
 main, #main-content {
-  flex: 2.5; 
+  flex: 1; 
   min-width: 320px;    /* Roomy center column for posts */
   display: flex;
   flex-direction: column;
@@ -131,7 +133,7 @@ main, #main-content {
 
 /* Right Sidebar Column */
 aside, .sidebar {
-  flex: 1; 
+  flex: 0 0 260px; 
   min-width: 260px;    /* Spotify & "welcome to my space!" fit on 1 line cleanly */
   display: flex;
   flex-direction: column;
