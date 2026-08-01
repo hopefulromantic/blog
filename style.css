@@ -262,7 +262,7 @@ aside, .sidebar {
 /* Countdown Iframe Widget (Left Sidebar) */
 .widget-countdown {
   width: 100%;
-  height: 240px;
+  height: 500px;
   border-radius: 8px;
   border: none;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
@@ -287,16 +287,6 @@ aside, .sidebar {
 .widget-chatbox h3 {
   color: #2b7a9e;
   border-bottom-color: #a3d5e8;
-}
-
-/* Spotify Widget */
-.widget-spotify {
-  background-color: #eafaf1;
-  border-color: #81c784;
-}
-.widget-spotify h3 {
-  color: #2e7d32;
-  border-bottom-color: #aed581;
 }
 
 /* Interests Widget */
