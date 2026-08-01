@@ -28,7 +28,7 @@ body {
 
 /* Overall page container width */
 .container {
-  max-width: 1150px;      /* Gives desktop sidebars plenty of width */
+  max-width: 1300px;      /* Gives desktop sidebars plenty of width */
   width: fit-content;    /* Keeps header, nav, and columns locked at identical width */
   margin: 0 auto;        /* Perfectly centers the entire block */
   display: flex;
@@ -40,7 +40,7 @@ body {
    3. HEADER BANNER
    ========================================================================== */
 header {
-  max-width: 1100px;      /* Restricts ONLY the header width */
+  max-width: 1200px;      /* Restricts ONLY the header width */
   margin: 0 auto 20px;   /* Centers the header horizontally */
   background: #fde8ed;
   border: 3px dashed #f4a2b8;
